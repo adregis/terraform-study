@@ -5,3 +5,7 @@ terraform {
         }
     }
 }
+
+resource "digitalocean_droplet" "web" {
+  
+}
