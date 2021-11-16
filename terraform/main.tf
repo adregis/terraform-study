@@ -1,10 +1,11 @@
 terraform {
-    reqired_providers {
+    required_providers {
         digitalocean = {
             source = "digitalocean/digitalocean"
         }
     }
 }
+
 
 resource "digitalocean_droplet" "web" {
     image   = "ubuntu-20-04-x64"
