@@ -1,0 +1,7 @@
+{
+  "ip_do_droplet": {
+    "sensitive": false,
+    "type": "string",
+    "value": "206.189.228.240"
+  }
+}
