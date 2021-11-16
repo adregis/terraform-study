@@ -11,9 +11,10 @@ resource "digitalocean_droplet" "web" {
     name    = "web-5"
     region  = "nyc1"
     size    = "s-1vcpu-1gb"
+    ssh_keys    = ["8b:02:a2:ab:cb:e6:eb:2d:44:41:09:fa:b6:ea:68:3b"]
 }
 
 output "ip_do_droplet" {
-    value   = digitalocean_droplet.web.ipv4_address
+    value = digitalocean_droplet.web.ipv4_address
 }
  
