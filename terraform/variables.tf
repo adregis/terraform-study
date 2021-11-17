@@ -1,7 +1,6 @@
-variable "digitalocean_token" {}
-
-provider "digitalocean" {
-  token = var.digitalocean_token
+variable "do_token" {
+  type  = string  
+  description = "Token para acesso aos recursos Digital Ocean"
 }
 
 variable "droplet_image" {
