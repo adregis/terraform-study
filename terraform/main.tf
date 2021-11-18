@@ -13,18 +13,20 @@ provider "digitalocean" {
 
 resource "digitalocean_droplet" "web" {
   image    = var.droplet_image
-  name     = "web"
+  name     = var.droplet_names[count.index]
   region   = var.droplet_region
   size     = var.droplet_size
-  ssh_keys = ["8b:02:a2:ab:cb:e6:eb:2d:44:41:09:fa:b6:ea:68:3b", "33:f3:1c:0d:cb:2c:ce:2e:f7:0a:7a:bf:f1:3a:83:fe"]
+  ssh_keys = var.droplet_ssh_keys
   lifecycle {
     create_before_destroy = true
     ignore_changes = [
       ssh_keys,
     ]
   }
+  count = 2
 }
+
 output "ip_do_droplet" {
-  value = digitalocean_droplet.web.ipv4_address
+  value = digitalocean_droplet.web[*].ipv4_address
 }
  
