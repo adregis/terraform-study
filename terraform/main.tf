@@ -7,10 +7,6 @@ terraform {
   }
 }
 
-provider "digitalocean" {
-  token = var.do_token
-}
-
 resource "digitalocean_droplet" "web" {
   image    = var.droplet_image
   name     = var.droplet_names[count.index]
