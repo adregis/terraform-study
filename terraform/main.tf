@@ -23,7 +23,7 @@ resource "digitalocean_droplet" "web" {
       ssh_keys,
     ]
   }
-  count = 2
+  count = length(var.droplet_names)
 }
 
 output "ip_do_droplet" {
