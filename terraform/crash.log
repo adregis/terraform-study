@@ -1,0 +1,1897 @@
+2021/11/21 15:06:25 [INFO] Terraform version: 0.14.4  
+2021/11/21 15:06:25 [INFO] Go runtime version: go1.15.6
+2021/11/21 15:06:25 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2021/11/21 15:06:25 [DEBUG] Attempting to open CLI config file: /home/adriano/.terraformrc
+2021/11/21 15:06:25 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /home/adriano/.terraform.d/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /home/adriano/.local/share/terraform/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /usr/share/cinnamon/terraform/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /usr/share/gnome/terraform/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /home/adriano/.local/share/flatpak/exports/share/terraform/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /var/lib/flatpak/exports/share/terraform/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2021/11/21 15:06:25 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2021/11/21 15:06:25 [INFO] CLI command args: []string{"apply"}
+2021/11/21 15:06:25 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2021/11/21 15:06:25 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2021/11/21 15:06:25 [DEBUG] New state was assigned lineage "cbd04cc5-cf9c-bed2-3143-af31c20894ea"
+2021/11/21 15:06:25 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2021/11/21 15:06:25 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2021/11/21 15:06:25 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2021/11/21 15:06:25 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2021/11/21 15:06:25 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/digitalocean/digitalocean v2.16.0 for linux_amd64 at .terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64
+2021/11/21 15:06:25 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64 as a candidate package for registry.terraform.io/digitalocean/digitalocean 2.16.0
+2021/11/21 15:06:25 [DEBUG] checking for provisioner in "."
+2021/11/21 15:06:25 [DEBUG] checking for provisioner in "/usr/local/bin"
+2021/11/21 15:06:25 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2021/11/21 15:06:25 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2021/11/21 15:06:25 [INFO] backend/local: starting Apply operation
+2021/11/21 15:06:25 [TRACE] backend/local: requesting state manager for workspace "default"
+2021/11/21 15:06:25 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2021/11/21 15:06:25 [TRACE] backend/local: requesting state lock for workspace "default"
+2021/11/21 15:06:25 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2021/11/21 15:06:25 [TRACE] statemgr.Filesystem: existing snapshot has lineage "7cbb2339-0401-92b8-b9a5-1f344c00a333" serial 58
+2021/11/21 15:06:25 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2021/11/21 15:06:25 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2021/11/21 15:06:25 [TRACE] backend/local: reading remote state for workspace "default"
+2021/11/21 15:06:25 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2021/11/21 15:06:25 [TRACE] statemgr.Filesystem: read snapshot with lineage "7cbb2339-0401-92b8-b9a5-1f344c00a333" serial 58
+2021/11/21 15:06:25 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2021/11/21 15:06:25 [TRACE] backend/local: building context for current working directory
+2021/11/21 15:06:25 [TRACE] terraform.NewContext: starting
+2021/11/21 15:06:25 [TRACE] terraform.NewContext: loading provider schemas
+2021/11/21 15:06:25 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/digitalocean/digitalocean"
+2021-11-21T15:06:25.393-0300 [INFO]  plugin: configuring client automatic mTLS
+2021-11-21T15:06:25.415-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 args=[.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0]
+2021-11-21T15:06:25.415-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27216
+2021-11-21T15:06:25.415-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0
+2021-11-21T15:06:25.422-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: configuring server automatic mTLS: timestamp=2021-11-21T15:06:25.422-0300
+2021-11-21T15:06:25.455-0300 [DEBUG] plugin: using plugin: version=5
+2021-11-21T15:06:25.455-0300 [DEBUG] plugin.terraform-provider-digitalocean_v2.16.0: plugin address: address=/tmp/plugin179504437 network=unix timestamp=2021-11-21T15:06:25.455-0300
+2021/11/21 15:06:25 [TRACE] GRPCProvider: GetSchema
+2021-11-21T15:06:25.496-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021/11/21 15:06:25 [TRACE] GRPCProvider: Close
+2021-11-21T15:06:25.504-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-21T15:06:25.505-0300 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27216
+2021-11-21T15:06:25.505-0300 [DEBUG] plugin: plugin exited
+2021/11/21 15:06:25 [TRACE] LoadSchemas: retrieving schema for provisioner "remote-exec"
+2021-11-21T15:06:25.505-0300 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, remote-exec]
+2021-11-21T15:06:25.505-0300 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=27229
+2021-11-21T15:06:25.505-0300 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2021-11-21T15:06:25.532-0300 [DEBUG] plugin: using plugin: version=5
+2021-11-21T15:06:25.532-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021-11-21T15:06:25.533-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-21T15:06:25.535-0300 [DEBUG] plugin: plugin process exited: path=/usr/local/bin/terraform pid=27229
+2021-11-21T15:06:25.535-0300 [DEBUG] plugin: plugin exited
+2021/11/21 15:06:25 [TRACE] terraform.NewContext: complete
+2021/11/21 15:06:25 [TRACE] backend/local: finished building terraform.Context
+2021/11/21 15:06:25 [TRACE] backend/local: requesting interactive input, if necessary
+2021/11/21 15:06:25 [TRACE] Context.Input: Prompting for provider arguments
+2021/11/21 15:06:25 [TRACE] Context.Input: Provider provider.digitalocean declared at provider.tf:3,1-24
+2021/11/21 15:06:25 [TRACE] Context.Input: Input for provider.digitalocean: map[string]cty.Value{}
+2021/11/21 15:06:25 [TRACE] backend/local: running validation operation
+2021/11/21 15:06:25 [INFO] terraform: building graph: GraphTypeValidate
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/11/21 15:06:25 [TRACE] ConfigTransformer: Starting for path: 
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/11/21 15:06:25 [TRACE] OutputTransformer: adding ip_do_droplet as *terraform.NodeApplyableOutput
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/11/21 15:06:25 [TRACE] StateTransformer: state is empty, so nothing to do
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/11/21 15:06:25 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web" (*terraform.NodeValidatableResource) config from main.tf:10,1-38
+2021/11/21 15:06:25 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/11/21 15:06:25 [TRACE] MissingProviderTransformer: added implicit provisioner remote-exec, first implied by digitalocean_droplet.web
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/11/21 15:06:25 [TRACE] ProvisionerTransformer: digitalocean_droplet.web is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/11/21 15:06:25 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider configuration from provider.tf:3,1-24
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/11/21 15:06:25 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web
+2021/11/21 15:06:25 [DEBUG] ProviderTransformer: "digitalocean_droplet.web" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "digitalocean_droplet.web" references: [var.droplet_names var.droplet_image var.droplet_ssh_keys var.droplet_region var.droplet_size var.droplet_names]
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.do_token" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_size" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_ssh_keys" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "provisioner.remote-exec" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_image" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_region" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_names" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "output.ip_do_droplet" references: [digitalocean_droplet.web]
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" references: [var.do_token]
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  digitalocean_droplet.web - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web - *terraform.NodeValidatableResource
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [DEBUG] Starting graph walk: walkValidate
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_ssh_keys"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_ssh_keys": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_ssh_keys": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "provisioner.remote-exec"
+2021/11/21 15:06:25 [TRACE] vertex "provisioner.remote-exec": starting visit (*terraform.NodeProvisioner)
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_region"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_region": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_region": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_image"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_image": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_image": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.do_token"
+2021/11/21 15:06:25 [TRACE] vertex "var.do_token": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.do_token": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_names"
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/digitalocean/digitalocean\"]"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_names": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_names": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_size"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_size": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_size": visit complete
+2021/11/21 15:06:25 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"]": starting visit (*terraform.NodeApplyableProvider)
+2021-11-21T15:06:25.536-0300 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, remote-exec]
+2021-11-21T15:06:25.536-0300 [INFO]  plugin: configuring client automatic mTLS
+2021-11-21T15:06:25.536-0300 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=27252
+2021-11-21T15:06:25.536-0300 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2021-11-21T15:06:25.561-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 args=[.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0]
+2021-11-21T15:06:25.561-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27273
+2021-11-21T15:06:25.561-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0
+2021-11-21T15:06:25.569-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: configuring server automatic mTLS: timestamp=2021-11-21T15:06:25.568-0300
+2021-11-21T15:06:25.569-0300 [DEBUG] plugin: using plugin: version=5
+2021/11/21 15:06:25 [TRACE] vertex "provisioner.remote-exec": visit complete
+2021-11-21T15:06:25.569-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021-11-21T15:06:25.599-0300 [DEBUG] plugin.terraform-provider-digitalocean_v2.16.0: plugin address: address=/tmp/plugin670153400 network=unix timestamp=2021-11-21T15:06:25.599-0300
+2021-11-21T15:06:25.599-0300 [DEBUG] plugin: using plugin: version=5
+2021/11/21 15:06:25 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider for provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] buildProviderConfig for provider["registry.terraform.io/digitalocean/digitalocean"]: using explicit config only
+2021/11/21 15:06:25 [TRACE] GRPCProvider: GetSchema
+2021-11-21T15:06:25.641-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021/11/21 15:06:25 [TRACE] GRPCProvider: PrepareProviderConfig
+2021/11/21 15:06:25 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"]": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "digitalocean_droplet.web"
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web": starting visit (*terraform.NodeValidatableResource)
+2021/11/21 15:06:25 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "output.ip_do_droplet"
+2021/11/21 15:06:25 [TRACE] vertex "output.ip_do_droplet": starting visit (*terraform.NodeApplyableOutput)
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:06:25 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/11/21 15:06:25 [TRACE] GRPCProvider: Close
+2021/11/21 15:06:25 [TRACE] ExecuteWriteOutput: Saving Create change for output.ip_do_droplet in changeset
+2021/11/21 15:06:25 [TRACE] EvalWriteOutput: Removing output.ip_do_droplet from state (it is now null)
+2021/11/21 15:06:25 [TRACE] vertex "output.ip_do_droplet": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/11/21 15:06:25 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/11/21 15:06:25 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-11-21T15:06:25.654-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021-11-21T15:06:25.654-0300 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27273
+2021-11-21T15:06:25.654-0300 [DEBUG] plugin: plugin exited
+2021/11/21 15:06:25 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "root"
+2021/11/21 15:06:25 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/11/21 15:06:25 [TRACE] vertex "root": visit complete
+2021/11/21 15:06:25 [INFO] backend/local: apply calling Plan
+2021/11/21 15:06:25 [INFO] terraform: building graph: GraphTypePlan
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/11/21 15:06:25 [TRACE] ConfigTransformer: Starting for path: 
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/11/21 15:06:25 [TRACE] OutputTransformer: adding ip_do_droplet as *terraform.NodeApplyableOutput
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.StateTransformer
+2021/11/21 15:06:25 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2021/11/21 15:06:25 [TRACE] StateTransformer: added *terraform.NodePlanDeposedResourceInstanceObject for digitalocean_droplet.web[0] deposed object df4fb4e4
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.StateTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/11/21 15:06:25 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web[0] (deposed df4fb4e4)" (*terraform.NodePlanDeposedResourceInstanceObject) config from main.tf:10,1-38
+2021/11/21 15:06:25 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web[0] (deposed df4fb4e4)
+2021/11/21 15:06:25 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:10,1-38
+2021/11/21 15:06:25 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web (expand)
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/11/21 15:06:25 [TRACE] MissingProviderTransformer: added implicit provisioner remote-exec, first implied by digitalocean_droplet.web (expand)
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/11/21 15:06:25 [TRACE] ProvisionerTransformer: digitalocean_droplet.web (expand) is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:25 [TRACE] ProvisionerTransformer: digitalocean_droplet.web[0] (deposed df4fb4e4) is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/11/21 15:06:25 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider configuration from provider.tf:3,1-24
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/11/21 15:06:25 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web (expand)
+2021/11/21 15:06:25 [DEBUG] ProviderTransformer: "digitalocean_droplet.web (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web[0] (deposed df4fb4e4)
+2021/11/21 15:06:25 [DEBUG] ProviderTransformer: "digitalocean_droplet.web[0] (deposed df4fb4e4)" (*terraform.NodePlanDeposedResourceInstanceObject) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/11/21 15:06:25 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web[0] (deposed df4fb4e4)
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web[0] (deposed df4fb4e4)
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web (expand)
+2021/11/21 15:06:25 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web (expand)
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "output.ip_do_droplet" references: [digitalocean_droplet.web (expand)]
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "digitalocean_droplet.web (expand)" references: [var.droplet_names var.droplet_ssh_keys var.droplet_size var.droplet_region var.droplet_image var.droplet_names]
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_image" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_size" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_ssh_keys" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "digitalocean_droplet.web[0] (deposed df4fb4e4)" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "provisioner.remote-exec" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" references: [var.do_token]
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_names" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.do_token" references: []
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "var.droplet_region" references: []
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/11/21 15:06:25 [TRACE] AttachDependenciesTransformer: digitalocean_droplet.web depends on []
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/11/21 15:06:25 [TRACE] ForcedCBDTransformer: "digitalocean_droplet.web (expand)" (*terraform.nodeExpandPlannableResource) already has create_before_destroy set
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandPlannableResource
+    digitalocean_droplet.web[0] (deposed df4fb4e4) - *terraform.NodePlanDeposedResourceInstanceObject
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:25 [DEBUG] Starting graph walk: walkPlan
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_names"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_names": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_image"
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.do_token"
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "provisioner.remote-exec"
+2021/11/21 15:06:25 [TRACE] vertex "provisioner.remote-exec": starting visit (*terraform.NodeProvisioner)
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_ssh_keys"
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_size"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_ssh_keys": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_size": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_ssh_keys": visit complete
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_size": visit complete
+2021-11-21T15:06:25.656-0300 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, remote-exec]
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_names": visit complete
+2021/11/21 15:06:25 [TRACE] vertex "var.do_token": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.do_token": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/digitalocean/digitalocean\"]"
+2021/11/21 15:06:25 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "var.droplet_region"
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_region": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_region": visit complete
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_image": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:25 [TRACE] vertex "var.droplet_image": visit complete
+2021-11-21T15:06:25.656-0300 [INFO]  plugin: configuring client automatic mTLS
+2021-11-21T15:06:25.656-0300 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=27287
+2021-11-21T15:06:25.656-0300 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2021-11-21T15:06:25.679-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 args=[.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0]
+2021-11-21T15:06:25.679-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27306
+2021-11-21T15:06:25.679-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0
+2021-11-21T15:06:25.686-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: configuring server automatic mTLS: timestamp=2021-11-21T15:06:25.686-0300
+2021-11-21T15:06:25.688-0300 [DEBUG] plugin: using plugin: version=5
+2021/11/21 15:06:25 [TRACE] vertex "provisioner.remote-exec": visit complete
+2021-11-21T15:06:25.688-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021-11-21T15:06:25.716-0300 [DEBUG] plugin.terraform-provider-digitalocean_v2.16.0: plugin address: address=/tmp/plugin950129415 network=unix timestamp=2021-11-21T15:06:25.716-0300
+2021-11-21T15:06:25.716-0300 [DEBUG] plugin: using plugin: version=5
+2021/11/21 15:06:25 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider for provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:25 [TRACE] buildProviderConfig for provider["registry.terraform.io/digitalocean/digitalocean"]: using explicit config only
+2021/11/21 15:06:25 [TRACE] GRPCProvider: GetSchema
+2021-11-21T15:06:25.758-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021/11/21 15:06:25 [TRACE] GRPCProvider: Configure
+2021-11-21T15:06:25.765-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:25 [INFO] DigitalOcean Client configured for URL: https://api.digitalocean.com: timestamp=2021-11-21T15:06:25.765-0300
+2021/11/21 15:06:25 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"]": visit complete
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "digitalocean_droplet.web (expand)"
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web (expand)": expanding dynamic subgraph
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "digitalocean_droplet.web[0] (deposed df4fb4e4)"
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web (expand)": entering dynamic subgraph
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web[0] (deposed df4fb4e4)": starting visit (*terraform.NodePlanDeposedResourceInstanceObject)
+2021/11/21 15:06:25 [TRACE] EvalReadStateDeposed: reading state for digitalocean_droplet.web[0] deposed object df4fb4e4
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "digitalocean_droplet.web"
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web": starting visit (*terraform.NodePlannableResource)
+2021/11/21 15:06:25 [TRACE] UpgradeResourceState: schema version of digitalocean_droplet.web[0] is still 1; calling provider "digitalocean" for any other minor fixups
+2021/11/21 15:06:25 [TRACE] GRPCProvider: UpgradeResourceState
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web": expanding dynamic subgraph
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2021/11/21 15:06:25 [TRACE] ResourceCountTransformer: adding digitalocean_droplet.web[0] as *terraform.NodePlannableResourceInstance
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  digitalocean_droplet.web[0] - *terraform.NodePlannableResourceInstance
+  ------
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "var.droplet_names"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "var.droplet_region"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "var.droplet_size"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "var.droplet_names"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "var.droplet_image"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "var.droplet_ssh_keys"
+2021/11/21 15:06:25 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:25 [DEBUG] ReferenceTransformer: "digitalocean_droplet.web[0]" references: []
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] Executing graph transform *terraform.RootTransformer
+2021/11/21 15:06:25 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web": entering dynamic subgraph
+2021/11/21 15:06:25 [TRACE] dag/walk: visiting "digitalocean_droplet.web[0]"
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web[0]": starting visit (*terraform.NodePlannableResourceInstance)
+2021/11/21 15:06:25 [TRACE] ReadResourceInstanceState: reading state for digitalocean_droplet.web[0]
+2021/11/21 15:06:25 [TRACE] UpgradeResourceState: schema version of digitalocean_droplet.web[0] is still 1; calling provider "digitalocean" for any other minor fixups
+2021/11/21 15:06:25 [TRACE] GRPCProvider: UpgradeResourceState
+2021/11/21 15:06:25 [TRACE] EvalWriteDiff: recorded Delete change for digitalocean_droplet.web[0] deposed object df4fb4e4
+2021/11/21 15:06:25 [TRACE] GRPCProvider: ReadResource
+2021/11/21 15:06:25 [TRACE] vertex "digitalocean_droplet.web[0] (deposed df4fb4e4)": visit complete
+2021-11-21T15:06:27.222-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:27 [WARN] DigitalOcean Droplet (274689549) not found: timestamp=2021-11-21T15:06:27.222-0300
+2021/11/21 15:06:27 [WARN] Provider "registry.terraform.io/digitalocean/digitalocean" produced an unexpected new value for digitalocean_droplet.web[0] during refresh.
+      - Root resource was present, but now absent
+2021/11/21 15:06:27 [TRACE] EvalWriteState: using RefreshState for digitalocean_droplet.web[0]
+2021/11/21 15:06:27 [TRACE] EvalWriteState: removing state object for digitalocean_droplet.web[0]
+2021/11/21 15:06:27 [TRACE] Re-validating config for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:27 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021-11-21T15:06:27.225-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:27 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-11-21T15:06:27.225-0300
+2021/11/21 15:06:27 [TRACE] GRPCProvider: PlanResourceChange
+2021/11/21 15:06:27 [WARN] Provider "registry.terraform.io/digitalocean/digitalocean" produced an invalid plan for digitalocean_droplet.web[0], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .graceful_shutdown: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .resize_disk: planned value cty.True does not match config value cty.NullVal(cty.Bool)
+      - .monitoring: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .backups: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+2021/11/21 15:06:27 [TRACE] EvalWriteState: writing current state object for digitalocean_droplet.web[0]
+2021/11/21 15:06:27 [TRACE] EvalWriteDiff: recorded CreateThenDelete change for digitalocean_droplet.web[0]
+2021/11/21 15:06:27 [TRACE] vertex "digitalocean_droplet.web[0]": visit complete
+2021/11/21 15:06:27 [TRACE] vertex "digitalocean_droplet.web": dynamic subgraph completed successfully
+2021/11/21 15:06:27 [TRACE] vertex "digitalocean_droplet.web": visit complete
+2021/11/21 15:06:27 [TRACE] vertex "digitalocean_droplet.web (expand)": dynamic subgraph completed successfully
+2021/11/21 15:06:27 [TRACE] vertex "digitalocean_droplet.web (expand)": visit complete
+2021/11/21 15:06:27 [TRACE] dag/walk: visiting "output.ip_do_droplet"
+2021/11/21 15:06:27 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:06:27 [TRACE] vertex "output.ip_do_droplet": starting visit (*terraform.NodeApplyableOutput)
+2021/11/21 15:06:27 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2021/11/21 15:06:27 [TRACE] GRPCProvider: Close
+2021-11-21T15:06:27.230-0300 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2021/11/21 15:06:27 [TRACE] ExecuteWriteOutput: Saving Create change for output.ip_do_droplet in changeset
+2021/11/21 15:06:27 [TRACE] EvalWriteOutput: Saving value for output.ip_do_droplet in state
+2021/11/21 15:06:27 [TRACE] vertex "output.ip_do_droplet": visit complete
+2021/11/21 15:06:27 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2021/11/21 15:06:27 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2021/11/21 15:06:27 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2021-11-21T15:06:27.231-0300 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27306
+2021-11-21T15:06:27.231-0300 [DEBUG] plugin: plugin exited
+2021/11/21 15:06:27 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)": visit complete
+2021/11/21 15:06:27 [TRACE] dag/walk: visiting "root"
+2021/11/21 15:06:27 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2021/11/21 15:06:27 [TRACE] vertex "root": visit complete
+2021/11/21 15:06:27 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2021/11/21 15:06:30 [INFO] backend/local: apply calling Apply
+2021/11/21 15:06:30 [INFO] terraform: building graph: GraphTypeApply
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2021/11/21 15:06:30 [TRACE] ConfigTransformer: Starting for path: 
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.LocalTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.OutputTransformer
+2021/11/21 15:06:30 [TRACE] OutputTransformer: adding ip_do_droplet as *terraform.NodeApplyableOutput
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.DiffTransformer
+2021/11/21 15:06:30 [TRACE] DiffTransformer starting
+2021/11/21 15:06:30 [TRACE] DiffTransformer: found Delete change for digitalocean_droplet.web[0] df4fb4e4
+2021/11/21 15:06:30 [TRACE] DiffTransformer: digitalocean_droplet.web[0] deposed object df4fb4e4 will be represented for destruction by digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [TRACE] DiffTransformer: found CreateThenDelete change for digitalocean_droplet.web[0] 
+2021/11/21 15:06:30 [TRACE] DiffTransformer: digitalocean_droplet.web[0] will be represented by digitalocean_droplet.web[0], deposing prior object to f5f8e770
+2021/11/21 15:06:30 [TRACE] DiffTransformer: digitalocean_droplet.web[0] deposed object f5f8e770 will be represented for destruction by digitalocean_droplet.web[0] (destroy deposed f5f8e770)
+2021/11/21 15:06:30 [TRACE] DiffTransformer complete
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:10,1-38
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web (expand)
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" (*terraform.NodeDestroyDeposedResourceInstanceObject) config from main.tf:10,1-38
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web[0]" (*terraform.NodeApplyableResourceInstance) config from main.tf:10,1-38
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching to "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" (*terraform.NodeDestroyDeposedResourceInstanceObject) config from main.tf:10,1-38
+2021/11/21 15:06:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to digitalocean_droplet.web[0] (destroy deposed f5f8e770)
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2021/11/21 15:06:30 [TRACE] MissingProviderTransformer: added implicit provisioner remote-exec, first implied by digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2021/11/21 15:06:30 [TRACE] ProvisionerTransformer: digitalocean_droplet.web[0] is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:30 [TRACE] ProvisionerTransformer: digitalocean_droplet.web[0] (destroy deposed f5f8e770) is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:30 [TRACE] ProvisionerTransformer: digitalocean_droplet.web (expand) is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:30 [TRACE] ProvisionerTransformer: digitalocean_droplet.web[0] (destroy deposed df4fb4e4) is provisioned by remote-exec ("provisioner.remote-exec")
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2021/11/21 15:06:30 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider configuration from provider.tf:3,1-24
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2021/11/21 15:06:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web[0] (destroy deposed f5f8e770)
+2021/11/21 15:06:30 [DEBUG] ProviderTransformer: "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" (*terraform.NodeDestroyDeposedResourceInstanceObject) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web (expand)
+2021/11/21 15:06:30 [DEBUG] ProviderTransformer: "digitalocean_droplet.web (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [DEBUG] ProviderTransformer: "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" (*terraform.NodeDestroyDeposedResourceInstanceObject) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/digitalocean/digitalocean"] serving digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [DEBUG] ProviderTransformer: "digitalocean_droplet.web[0]" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2021/11/21 15:06:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web[0] (destroy deposed f5f8e770)
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web[0] (destroy deposed f5f8e770)
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching resource schema to digitalocean_droplet.web (expand)
+2021/11/21 15:06:30 [TRACE] AttachSchemaTransformer: attaching provisioner "remote-exec" config schema to digitalocean_droplet.web (expand)
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2021/11/21 15:06:30 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:30 [INFO] ReferenceTransformer: reference not found: "count.index"
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "digitalocean_droplet.web[0]" references: [var.droplet_names var.droplet_image var.droplet_names var.droplet_ssh_keys var.droplet_size var.droplet_region digitalocean_droplet.web (expand)]
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "digitalocean_droplet.web (expand)" references: [var.droplet_names]
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "var.droplet_size" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "var.do_token" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "var.droplet_image" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "provisioner.remote-exec" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" references: [var.do_token]
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "var.droplet_region" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "var.droplet_ssh_keys" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "var.droplet_names" references: []
+2021/11/21 15:06:30 [DEBUG] ReferenceTransformer: "output.ip_do_droplet" references: [digitalocean_droplet.web[0] digitalocean_droplet.web (expand)]
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2021/11/21 15:06:30 [TRACE] AttachDependenciesTransformer: digitalocean_droplet.web depends on []
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2021/11/21 15:06:30 [TRACE] ForcedCBDTransformer: "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" (*terraform.NodeDestroyDeposedResourceInstanceObject) already has create_before_destroy set
+2021/11/21 15:06:30 [TRACE] ForcedCBDTransformer: "digitalocean_droplet.web[0]" (*terraform.NodeApplyableResourceInstance) already has create_before_destroy set
+2021/11/21 15:06:30 [TRACE] ForcedCBDTransformer: "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" (*terraform.NodeDestroyDeposedResourceInstanceObject) already has create_before_destroy set
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2021/11/21 15:06:30 [TRACE] DestroyEdgeTransformer: "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" (*terraform.NodeDestroyDeposedResourceInstanceObject) destroys digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] DestroyEdgeTransformer: "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" (*terraform.NodeDestroyDeposedResourceInstanceObject) destroys digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] DestroyEdgeTransformer: connecting creator "digitalocean_droplet.web[0]" with destroyer "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)"
+2021/11/21 15:06:30 [TRACE] DestroyEdgeTransformer: connecting creator "digitalocean_droplet.web[0]" with destroyer "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2021/11/21 15:06:30 [TRACE] CBDEdgeTransformer: reversing edge digitalocean_droplet.web[0] -> digitalocean_droplet.web[0] (destroy deposed df4fb4e4)
+2021/11/21 15:06:30 [TRACE] CBDEdgeTransformer: reversing edge digitalocean_droplet.web[0] -> digitalocean_droplet.web[0] (destroy deposed f5f8e770)
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.do_token - *terraform.NodeRootVariable
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_names - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2021/11/21 15:06:30 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    provisioner.remote-exec - *terraform.NodeProvisioner
+    var.droplet_names - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+    digitalocean_droplet.web (expand) - *terraform.nodeExpandApplyableResource
+    var.droplet_image - *terraform.NodeRootVariable
+    var.droplet_region - *terraform.NodeRootVariable
+    var.droplet_size - *terraform.NodeRootVariable
+    var.droplet_ssh_keys - *terraform.NodeRootVariable
+  digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    output.ip_do_droplet - *terraform.NodeApplyableOutput
+  output.ip_do_droplet - *terraform.NodeApplyableOutput
+    digitalocean_droplet.web[0] - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/digitalocean/digitalocean"] - *terraform.NodeApplyableProvider
+    var.do_token - *terraform.NodeRootVariable
+  provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+    digitalocean_droplet.web[0] (destroy deposed df4fb4e4) - *terraform.NodeDestroyDeposedResourceInstanceObject
+    digitalocean_droplet.web[0] (destroy deposed f5f8e770) - *terraform.NodeDestroyDeposedResourceInstanceObject
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/digitalocean/digitalocean"] (close) - *terraform.graphNodeCloseProvider
+    provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  var.do_token - *terraform.NodeRootVariable
+  var.droplet_image - *terraform.NodeRootVariable
+  var.droplet_names - *terraform.NodeRootVariable
+  var.droplet_region - *terraform.NodeRootVariable
+  var.droplet_size - *terraform.NodeRootVariable
+  var.droplet_ssh_keys - *terraform.NodeRootVariable
+  ------
+2021/11/21 15:06:30 [DEBUG] Starting graph walk: walkApply
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "var.droplet_names"
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "var.do_token"
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "var.droplet_image"
+2021/11/21 15:06:30 [TRACE] vertex "var.do_token": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_image": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:30 [TRACE] vertex "var.do_token": visit complete
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "var.droplet_region"
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_names": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_image": visit complete
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "var.droplet_ssh_keys"
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/digitalocean/digitalocean\"]"
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_ssh_keys": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_names": visit complete
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "provisioner.remote-exec"
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_ssh_keys": visit complete
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_region": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_region": visit complete
+2021/11/21 15:06:30 [TRACE] vertex "provisioner.remote-exec": starting visit (*terraform.NodeProvisioner)
+2021/11/21 15:06:30 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"]": starting visit (*terraform.NodeApplyableProvider)
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "var.droplet_size"
+2021-11-21T15:06:30.123-0300 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, remote-exec]
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_size": starting visit (*terraform.NodeRootVariable)
+2021/11/21 15:06:30 [TRACE] vertex "var.droplet_size": visit complete
+2021-11-21T15:06:30.123-0300 [INFO]  plugin: configuring client automatic mTLS
+2021-11-21T15:06:30.123-0300 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=27363
+2021-11-21T15:06:30.123-0300 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2021-11-21T15:06:30.162-0300 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 args=[.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0]
+2021-11-21T15:06:30.163-0300 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0 pid=27385
+2021-11-21T15:06:30.163-0300 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.16.0/linux_amd64/terraform-provider-digitalocean_v2.16.0
+2021-11-21T15:06:30.172-0300 [DEBUG] plugin: using plugin: version=5
+2021/11/21 15:06:30 [TRACE] vertex "provisioner.remote-exec": visit complete
+2021-11-21T15:06:30.172-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021-11-21T15:06:30.174-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: configuring server automatic mTLS: timestamp=2021-11-21T15:06:30.174-0300
+2021-11-21T15:06:30.209-0300 [DEBUG] plugin.terraform-provider-digitalocean_v2.16.0: plugin address: address=/tmp/plugin444513874 network=unix timestamp=2021-11-21T15:06:30.209-0300
+2021-11-21T15:06:30.209-0300 [DEBUG] plugin: using plugin: version=5
+2021/11/21 15:06:30 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/digitalocean/digitalocean\"]" provider for provider["registry.terraform.io/digitalocean/digitalocean"]
+2021/11/21 15:06:30 [TRACE] buildProviderConfig for provider["registry.terraform.io/digitalocean/digitalocean"]: using explicit config only
+2021/11/21 15:06:30 [TRACE] GRPCProvider: GetSchema
+2021-11-21T15:06:30.252-0300 [TRACE] plugin.stdio: waiting for stdio data
+2021/11/21 15:06:30 [TRACE] GRPCProvider: Configure
+2021-11-21T15:06:30.259-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:30 [INFO] DigitalOcean Client configured for URL: https://api.digitalocean.com: timestamp=2021-11-21T15:06:30.259-0300
+2021/11/21 15:06:30 [TRACE] vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"]": visit complete
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "digitalocean_droplet.web (expand)"
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web (expand)": expanding dynamic subgraph
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web (expand)": entering dynamic subgraph
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "digitalocean_droplet.web"
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web": starting visit (*terraform.NodeApplyableResource)
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web": visit complete
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web (expand)": dynamic subgraph completed successfully
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web (expand)": visit complete
+2021/11/21 15:06:30 [TRACE] dag/walk: visiting "digitalocean_droplet.web[0]"
+2021/11/21 15:06:30 [TRACE] vertex "digitalocean_droplet.web[0]": starting visit (*terraform.NodeApplyableResourceInstance)
+2021/11/21 15:06:30 [TRACE] EvalReadDiff: Read CreateThenDelete change from plan for digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] EvalDeposeState: prior object for digitalocean_droplet.web[0] now deposed with key f5f8e770
+2021/11/21 15:06:30 [TRACE] EvalReadState: reading state for digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] EvalReadState: no state present for digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] EvalReadDiff: Read CreateThenDelete change from plan for digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] Re-validating config for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:30 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2021-11-21T15:06:30.260-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:30 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2021-11-21T15:06:30.260-0300
+2021/11/21 15:06:30 [TRACE] GRPCProvider: PlanResourceChange
+2021/11/21 15:06:30 [WARN] Provider "registry.terraform.io/digitalocean/digitalocean" produced an invalid plan for digitalocean_droplet.web[0], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .backups: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .ipv6: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .graceful_shutdown: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .resize_disk: planned value cty.True does not match config value cty.NullVal(cty.Bool)
+      - .monitoring: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+2021/11/21 15:06:30 [TRACE] EvalDiff: digitalocean_droplet.web[0] treating Create change as CreateThenDelete change to match with earlier plan
+2021/11/21 15:06:30 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action CreateThenDelete) matches planned change (action CreateThenDelete)
+2021/11/21 15:06:30 [TRACE] EvalReadState: reading state for digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] EvalReadState: no state present for digitalocean_droplet.web[0]
+2021/11/21 15:06:30 [TRACE] EvalReduceDiff: digitalocean_droplet.web[0] change simplified from CreateThenDelete to Create for apply node
+2021/11/21 15:06:30 [DEBUG] EvalApply: ProviderMeta config value set
+2021/11/21 15:06:30 [DEBUG] digitalocean_droplet.web[0]: applying the planned Create change
+2021/11/21 15:06:30 [TRACE] GRPCProvider: ApplyResourceChange
+2021-11-21T15:06:30.262-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:30 [DEBUG] setting computed for "volume_ids" from ComputedKeys: timestamp=2021-11-21T15:06:30.262-0300
+2021-11-21T15:06:30.262-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:30 [DEBUG] Droplet create configuration: &godo.DropletCreateRequest{Name:"brasil", Region:"ams3", Size:"s-1vcpu-1gb", Image:godo.DropletCreateImage{ID:0, Slug:"ubuntu-18-04-x64"}, SSHKeys:[]godo.DropletCreateSSHKey{godo.DropletCreateSSHKey{ID:0, Fingerprint:"8b:02:a2:ab:cb:e6:eb:2d:44:41:09:fa:b6:ea:68:3b"}, godo.DropletCreateSSHKey{ID:0, Fingerprint:"33:f3:1c:0d:cb:2c:ce:2e:f7:0a:7a:bf:f1:3a:83:fe"}}, Backups:false, IPv6:false, PrivateNetworking:false, Monitoring:false, UserData:"", Volumes:[]godo.DropletCreateVolume(nil), Tags:[]string{}, VPCUUID:"", WithDropletAgent:(*bool)(nil)}: timestamp=2021-11-21T15:06:30.262-0300
+2021-11-21T15:06:33.032-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:33 [INFO] Droplet ID: 274690606: timestamp=2021-11-21T15:06:33.032-0300
+2021-11-21T15:06:33.032-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:33 [INFO] Waiting for droplet (274690606) to have status of active: timestamp=2021-11-21T15:06:33.032-0300
+2021-11-21T15:06:33.032-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:33 [DEBUG] Waiting for state to become: [active]: timestamp=2021-11-21T15:06:33.032-0300
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:06:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:40 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021-11-21T15:06:44.340-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:44 [TRACE] Waiting 3s before next try: timestamp=2021-11-21T15:06:44.340-0300
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:45 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021-11-21T15:06:48.593-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:48 [TRACE] Waiting 6s before next try: timestamp=2021-11-21T15:06:48.592-0300
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:50 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:06:55 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021-11-21T15:06:56.174-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:06:56 [TRACE] Waiting 10s before next try: timestamp=2021-11-21T15:06:56.174-0300
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:00 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:05 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021-11-21T15:07:07.639-0300 [INFO]  plugin.terraform-provider-digitalocean_v2.16.0: 2021/11/21 15:07:07 [TRACE] Waiting 10s before next try: timestamp=2021-11-21T15:07:07.638-0300
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:10 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:15 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:20 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:21 [TRACE] EvalWriteState: recording 0 dependencies for digitalocean_droplet.web[0]
+2021/11/21 15:07:21 [TRACE] EvalWriteState: writing current state object for digitalocean_droplet.web[0]
+2021/11/21 15:07:21 [TRACE] EvalApplyProvisioners: provisioning digitalocean_droplet.web[0] with "remote-exec"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:25 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:30 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:35 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:40 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:45 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:50 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:07:55 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:00 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:05 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:10 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:15 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:20 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:25 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:30 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:40 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:45 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:50 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/digitalocean/digitalocean\"] (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "provisioner.remote-exec (close)" is waiting for "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:55 [TRACE] dag/walk: vertex "output.ip_do_droplet" is waiting for "digitalocean_droplet.web[0]"
+2021/11/21 15:08:55 [TRACE] EvalWriteState: recording 0 dependencies for digitalocean_droplet.web[0]
+2021/11/21 15:08:55 [TRACE] EvalWriteState: writing current state object for digitalocean_droplet.web[0]
+2021/11/21 15:08:55 [TRACE] statemgr.Filesystem: creating backup snapshot at terraform.tfstate.backup
+2021/11/21 15:08:55 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 59
+2021/11/21 15:08:55 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2021/11/21 15:08:55 [TRACE] vertex "digitalocean_droplet.web[0]": visit complete
+2021/11/21 15:08:55 [TRACE] dag/walk: visiting "digitalocean_droplet.web[0] (destroy deposed f5f8e770)"
+2021/11/21 15:08:55 [TRACE] dag/walk: visiting "output.ip_do_droplet"
+2021/11/21 15:08:55 [TRACE] vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)": starting visit (*terraform.NodeDestroyDeposedResourceInstanceObject)
+2021/11/21 15:08:55 [TRACE] dag/walk: visiting "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)"
+2021/11/21 15:08:55 [TRACE] vertex "output.ip_do_droplet": starting visit (*terraform.NodeApplyableOutput)
+2021/11/21 15:08:55 [TRACE] vertex "digitalocean_droplet.web[0] (destroy deposed df4fb4e4)": starting visit (*terraform.NodeDestroyDeposedResourceInstanceObject)
+2021/11/21 15:08:55 [TRACE] EvalReadStateDeposed: reading state for digitalocean_droplet.web[0] deposed object f5f8e770
+2021/11/21 15:08:55 [TRACE] EvalReadStateDeposed: no state present for digitalocean_droplet.web[0] deposed object f5f8e770
+2021/11/21 15:08:55 [TRACE] EvalReadStateDeposed: reading state for digitalocean_droplet.web[0] deposed object df4fb4e4
+2021/11/21 15:08:55 [TRACE] vertex "digitalocean_droplet.web[0] (destroy deposed f5f8e770)": visit complete
+panic: EvalApplyPre for digitalocean_droplet.web[0] called with nil Change
+
+goroutine 220 [running]:
+github.com/hashicorp/terraform/terraform.(*EvalApplyPre).Eval(0xc000390540, 0x2c96b00, 0xc0008da410, 0x0, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/terraform/eval_apply.go:399 +0x56b
+github.com/hashicorp/terraform/terraform.(*NodeDestroyDeposedResourceInstanceObject).Execute(0xc0006ed280, 0x2c96b00, 0xc0008da410, 0x3d41e01, 0x0, 0x0)
+	/home/circleci/project/project/terraform/node_resource_destroy_deposed.go:225 +0x4b5
+github.com/hashicorp/terraform/terraform.(*ContextGraphWalker).Execute(0xc000b54410, 0x2c96b00, 0xc0008da410, 0x7ff6cf3720c8, 0xc0006ed280, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/terraform/graph_walk_context.go:127 +0xbc
+github.com/hashicorp/terraform/terraform.(*Graph).walk.func1(0x27bfce0, 0xc0006ed280, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/terraform/graph.go:59 +0x962
+github.com/hashicorp/terraform/dag.(*Walker).walkVertex(0xc00020db00, 0x27bfce0, 0xc0006ed280, 0xc000ca6ec0)
+	/home/circleci/project/project/dag/walk.go:387 +0x375
+created by github.com/hashicorp/terraform/dag.(*Walker).Update
+	/home/circleci/project/project/dag/walk.go:309 +0x1246

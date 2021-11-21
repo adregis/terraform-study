@@ -2,7 +2,8 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/digitalocean/digitalocean" {
-  version = "2.16.0"
+  version     = "2.16.0"
+  constraints = "~> 2.0"
   hashes = [
     "h1:c0f7+TFbN+jcsSbPqbl7dMNcvN5hHwgQ995QsSb03zA=",
     "zh:0e14900a6a6489e8578ae4de82182e7db0723f72e0e116c67f799c5333dc9d93",
