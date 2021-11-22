@@ -10,7 +10,7 @@ variable "droplet_image" {
 
 }
 
-variable "droplet_region" {
+variable "datacenter_region" {
   type        = string
   description = "Regiao onde os droplets serão criados"
   default     = "ams3"
@@ -30,18 +30,55 @@ variable "droplet_ssh_keys" {
 
 variable "droplet_names" {
   type    = list(string)
-  default = ["terraform", "consul"]
+  default = ["terraform"]
 }
 
 variable "private_key_path" {
-  type    = string
+  type        = string
   description = "Caminho para chave"
   default     = "/home/adriano/.ssh/id_rsa"
 }
 
 variable "lb_name" {
-  type = string
+  type        = string
   description = "Load balancer"
-  default = "hashicourse"
-  
+  default     = "hashicourse"
+
+}
+
+variable "pg_cluster_name" {
+  type = string
+  description = "Nome do cluster de PG"
+  default = "postgres-cluster"
+}
+
+variable "pg_cluster_version" {
+  type = string
+  description = "versão do nosso cluster de pg"
+  default = "12"
+}
+
+variable "pg_cluster_size" {
+  type = string
+  description = "Tamanho do cluster PG"
+  default = "db-s-1vcpu-1gb" 
+}
+
+variable "pg_node_count" {
+  type = number
+  description = "Numero de nos do nosso cluster"
+  default = 1
+}
+
+variable "database_name" {
+  type = string
+  description = "Nome do banco de dados"
+  default = "limerick"
+}
+
+variable "database_username" {
+  type = string
+  description = "Username para o banco de dados"
+  default = "irlanda"
+  sensitive = true
 }
