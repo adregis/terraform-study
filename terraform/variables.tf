@@ -47,38 +47,43 @@ variable "lb_name" {
 }
 
 variable "pg_cluster_name" {
-  type = string
+  type        = string
   description = "Nome do cluster de PG"
-  default = "postgres-cluster"
+  default     = "postgres-cluster"
 }
 
 variable "pg_cluster_version" {
-  type = string
+  type        = string
   description = "versão do nosso cluster de pg"
-  default = "12"
+  default     = "12"
 }
 
 variable "pg_cluster_size" {
-  type = string
+  type        = string
   description = "Tamanho do cluster PG"
-  default = "db-s-1vcpu-1gb" 
+  default     = "db-s-1vcpu-1gb"
 }
 
 variable "pg_node_count" {
-  type = number
+  type        = number
   description = "Numero de nos do nosso cluster"
-  default = 1
+  default     = 1
 }
 
 variable "database_name" {
-  type = string
+  type        = string
   description = "Nome do banco de dados"
-  default = "limerick"
+  default     = "limerick"
 }
 
 variable "database_username" {
-  type = string
+  type        = string
   description = "Username para o banco de dados"
-  default = "irlanda"
-  sensitive = true
+  default     = "irlanda"
 }
+
+variable "firewall_name" {
+  type        = string
+  description = "Nome do firewall"
+  default     = "braum"
+} 
