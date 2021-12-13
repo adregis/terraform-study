@@ -86,4 +86,29 @@ variable "firewall_name" {
   type        = string
   description = "Nome do firewall"
   default     = "braum"
-} 
+}
+
+variable "troubleshooting" {
+  type        = bool
+  description = "Liberar acessos aos droplets na porta 22"
+  default     = false
+
+}
+
+variable "subdomain" {
+  type        = string
+  description = "Nome do subdominio"
+  default       = "terraform"
+}
+
+variable "domain" {
+  type        = string
+  description = "Nome do dominio"
+  default       = "adregis2.com"
+}
+
+variable "environment_name" {
+  type = string
+  description = "Nome do ambiente"
+  default = "PROD"
+}

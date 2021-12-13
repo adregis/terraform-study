@@ -21,3 +21,10 @@ resource "digitalocean_loadbalancer" "public" {
 output "ip_do_droplet" {
   value = digitalocean_droplet.web[*].ipv4_address
 }
+
+resource "digitalocean_domain" "subdomain" {
+  name       = "${var.subdomain}.${var.domain}"
+  ip_address = digitalocean_loadbalancer.public.ip
+}
+
+
